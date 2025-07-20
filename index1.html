@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tudy - To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h2>Hello Anna</h2>
+      <p>Today you have <span id="taskCount">0</span> tasks</p>
+    </header>
+
+    <main>
+      <section class="category" onclick="showTasks('Today')">
+        <span>📅 Today</span>
+        <span id="todayCount">0 Tasks</span>
+      </section>
+
+      <section class="category" onclick="showTasks('Work')">
+        <span>💼 Work</span>
+        <span id="workCount">0 Tasks</span>
+      </section>
+
+      <section class="category" onclick="showTasks('Personal')">
+        <span>👩 Personal</span>
+        <span id="personalCount">0 Tasks</span>
+      </section>
+    </main>
+
+    <div class="task-box" id="taskBox">
+      <h3 id="categoryTitle">Category</h3>
+      <ul id="taskList"></ul>
+
+      <input type="text" id="taskInput" placeholder="Add a task">
+      <button onclick="addTask()">Add Task</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
